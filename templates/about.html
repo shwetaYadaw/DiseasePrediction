@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Smart Health Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🏥</span>
+                <a href="/">Smart Health</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/health-tips" class="nav-link">Health Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link active">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About SmartCrop</h1>
+            <p>Intelligent Health Prediction powered by Machine Learning</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="input-card">
+            <h2 class="section-title">
+                <span class="title-icon">📱</span>
+                About Our Application
+            </h2>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.5rem;">
+                Smart Health Disease Prediction is an advanced health prediction system designed to help users identify potential health risks 
+                by analyzing their symptoms using artificial intelligence and machine learning technologies. Our mission is 
+                to make healthcare more accessible and empower individuals to take charge of their health.
+            </p>
+
+            <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                🎯 Our Mission
+            </h3>
+            <p style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                To provide an easy-to-use, accurate, and accessible health assessment tool that helps individuals 
+                understand their health status and make informed decisions about seeking professional medical care.
+            </p>
+
+            <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                🔬 Technology
+            </h3>
+            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 1rem; margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 1rem;">
+                    <strong>Backend:</strong> Flask (Python) - A lightweight and powerful web framework for building the API
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    <strong>ML Model:</strong> Random Forest Classifier - An ensemble learning method that combines multiple decision trees for accurate predictions
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    <strong>Dataset:</strong> Comprehensive medical dataset with 131 symptoms and multiple disease classifications
+                </p>
+                <p>
+                    <strong>Frontend:</strong> HTML5, CSS3, and JavaScript - Modern, responsive design for all devices
+                </p>
+            </div>
+
+            <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                ✨ Features
+            </h3>
+            <div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🎯</span>
+                    <div>
+                        <strong>Accurate Predictions</strong>
+                        <p style="color: var(--text-secondary); margin-top: 0.25rem;">AI-powered disease prediction based on symptoms</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">📊</span>
+                    <div>
+                        <strong>Visual Analytics</strong>
+                        <p style="color: var(--text-secondary); margin-top: 0.25rem;">Interactive charts showing prediction probability</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🔒</span>
+                    <div>
+                        <strong>Privacy First</strong>
+                        <p style="color: var(--text-secondary); margin-top: 0.25rem;">Your data is not stored or shared with anyone</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">📱</span>
+                    <div>
+                        <strong>Mobile Friendly</strong>
+                        <p style="color: var(--text-secondary); margin-top: 0.25rem;">Works seamlessly on all devices and screen sizes</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">⚡</span>
+                    <div>
+                        <strong>Fast Processing</strong>
+                        <p style="color: var(--text-secondary); margin-top: 0.25rem;">Get instant predictions without delays</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">💡</span>
+                    <div>
+                        <strong>Health Tips</strong>
+                        <p style="color: var(--text-secondary); margin-top: 0.25rem;">Get personalized health recommendations and tips</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                ⚖️ Important Disclaimer
+            </h3>
+            <div style="background: linear-gradient(135deg, #fee2e2, #fecaca); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #ef4444; margin-bottom: 1.5rem;">
+                <p style="color: #7f1d1d; margin-bottom: 0.5rem;">
+                    <strong>⚠️ MEDICAL DISCLAIMER:</strong>
+                </p>
+                <p style="color: #7f1d1d; margin-bottom: 0.5rem;">
+                    SmartCrop is designed for educational and informational purposes only. It is NOT a substitute for professional medical advice, diagnosis, or treatment. 
+                    The results provided are predictions based on machine learning models and should not be considered as medical advice.
+                </p>
+                <p style="color: #7f1d1d;">
+                    Always consult with a qualified healthcare professional before making any health-related decisions or starting any treatment.
+                </p>
+            </div>
+
+            <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                📊 Model Performance
+            </h3>
+            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 1rem; margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 1rem;">
+                    Our Random Forest model has been trained on a comprehensive medical dataset with high accuracy metrics.
+                    The model analyzes 131 different symptoms to make predictions about diseases including Diabetes.
+                </p>
+                <p>
+                    The system continuously learns and improves its accuracy with more data and feedback.
+                </p>
+            </div>
+
+            <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                📧 Contact & Support
+            </h3>
+            <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 1rem;">
+                <p style="margin-bottom: 0.5rem;">
+                    Have questions or feedback? We'd love to hear from you!
+                </p>
+                <p style="margin-bottom: 0.5rem;">
+                    <strong>Email:</strong> support@smartcrop.health
+                </p>
+                <p>
+                    <strong>Website:</strong> www.smartcrop.health
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-card">
+                <div class="info-icon">🤖</div>
+                <h3>AI Powered</h3>
+                <p>Advanced machine learning algorithms for accurate predictions</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Get instant results within seconds</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🎓</div>
+                <h3>Evidence Based</h3>
+                <p>Built on real medical data and scientific research</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Smart Health Disease Prediction System</p>
+            <p>Built with <span class="heart">❤️</span> by AI Health Tech</p>
+        </div>
+    </footer>
+</body>
+</html>

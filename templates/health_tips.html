@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tips - Smart Health Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🏥</span>
+                <a href="/">Smart Health</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/health-tips" class="nav-link active">Health Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Health Tips & Prevention</h1>
+            <p>Learn how to maintain a healthy lifestyle and prevent diseases</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="input-card">
+            <h2 class="section-title">
+                <span class="title-icon">💪</span>
+                Diabetes Prevention Tips
+            </h2>
+
+            <div style="display: grid; gap: 1.5rem;">
+                <div class="tip-card" style="background: linear-gradient(135deg, #fef3c7, #fef08a); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #f59e0b;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #92400e;">🥗 Maintain a Healthy Diet</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Eat plenty of vegetables and fruits (at least 5 servings daily)</li>
+                        <li style="margin: 0.5rem 0;">✓ Choose whole grains over refined carbohydrates</li>
+                        <li style="margin: 0.5rem 0;">✓ Limit sugar and sugary drinks consumption</li>
+                        <li style="margin: 0.5rem 0;">✓ Include lean proteins like fish, chicken, and legumes</li>
+                        <li style="margin: 0.5rem 0;">✓ Reduce salt intake and avoid processed foods</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card" style="background: linear-gradient(135deg, #dcfce7, #bbf7d0); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #10b981;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #065f46;">🏃 Regular Physical Activity</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Aim for at least 150 minutes of moderate exercise per week</li>
+                        <li style="margin: 0.5rem 0;">✓ Include strength training 2-3 times per week</li>
+                        <li style="margin: 0.5rem 0;">✓ Take short walks after meals to stabilize blood sugar</li>
+                        <li style="margin: 0.5rem 0;">✓ Reduce sedentary time and move regularly</li>
+                        <li style="margin: 0.5rem 0;">✓ Find activities you enjoy to stay consistent</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card" style="background: linear-gradient(135deg, #cffafe, #a5f3fc); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #06b6d4;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #164e63;">😴 Maintain Healthy Sleep</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Get 7-9 hours of sleep per night</li>
+                        <li style="margin: 0.5rem 0;">✓ Keep a consistent sleep schedule</li>
+                        <li style="margin: 0.5rem 0;">✓ Create a comfortable sleep environment</li>
+                        <li style="margin: 0.5rem 0;">✓ Avoid screens 1 hour before bedtime</li>
+                        <li style="margin: 0.5rem 0;">✓ Limit caffeine and alcohol intake</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card" style="background: linear-gradient(135deg, #f3e8ff, #ede9fe); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #a855f7;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #581c87;">🧘 Manage Stress</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Practice meditation or mindfulness daily</li>
+                        <li style="margin: 0.5rem 0;">✓ Deep breathing exercises (5-10 minutes daily)</li>
+                        <li style="margin: 0.5rem 0;">✓ Engage in hobbies and activities you enjoy</li>
+                        <li style="margin: 0.5rem 0;">✓ Maintain good work-life balance</li>
+                        <li style="margin: 0.5rem 0;">✓ Seek professional help if needed</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card" style="background: linear-gradient(135deg, #fee2e2, #fecaca); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #ef4444;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #7f1d1d;">⚠️ Avoid Risk Factors</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Quit smoking completely</li>
+                        <li style="margin: 0.5rem 0;">✓ Limit alcohol consumption</li>
+                        <li style="margin: 0.5rem 0;">✓ Maintain a healthy weight (BMI < 25)</li>
+                        <li style="margin: 0.5rem 0;">✓ Manage blood pressure and cholesterol</li>
+                        <li style="margin: 0.5rem 0;">✓ Get regular health check-ups</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid #2563eb;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #1e3a8a;">📊 Monitor Your Health</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Get regular blood glucose checks</li>
+                        <li style="margin: 0.5rem 0;">✓ Monitor weight and BMI regularly</li>
+                        <li style="margin: 0.5rem 0;">✓ Check blood pressure at least annually</li>
+                        <li style="margin: 0.5rem 0;">✓ Keep records of health metrics</li>
+                        <li style="margin: 0.5rem 0;">✓ Schedule annual health screenings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Smart Health Disease Prediction System</p>
+            <p>Built with <span class="heart">❤️</span> by AI Health Tech</p>
+        </div>
+    </footer>
+</body>
+</html>

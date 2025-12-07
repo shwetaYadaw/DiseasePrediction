@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🏥</span>
+                <a href="/">Smart Health</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">Prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/health-tips" class="nav-link">Health Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Smart Health Disease Prediction</h1>
+            <p>AI-powered disease prediction based on your symptoms</p>
+            <div class="hero-badge">✨ Powered by Machine Learning</div>
+        </div>
+        <div class="hero-image">
+                <div class="floating-card">
+                <span class="card-icon">🔍</span>
+                <p>Select Symptoms</p>
+            </div>
+            <div class="floating-card delay-1">
+                <span class="card-icon">⚡</span>
+                <p>Get Prediction</p>
+            </div>
+            <div class="floating-card delay-2">
+                <span class="card-icon">📈</span>
+                <p>View Results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="prediction-section">
+            <!-- Input Section -->
+            <div class="input-card">
+                <h2 class="section-title">
+                    <span class="title-icon">🩺</span>
+                    Select Your Symptoms
+                </h2>
+                <p class="section-subtitle">Choose all symptoms you are experiencing</p>
+
+                <div class="symptoms-container">
+                    <div class="symptoms-grid" id="symptomsGrid">
+                        <!-- Symptoms will be loaded here via JavaScript -->
+                    </div>
+                    <div class="symptom-counter">
+                        <span id="symptomCount">0</span> symptom(s) selected
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="predictBtn" onclick="makePrediction()">
+                    <span class="btn-icon">⚡</span>
+                    Analyze Symptoms
+                </button>
+                <button class="btn btn-secondary" id="resetBtn" onclick="resetForm()">
+                    <span class="btn-icon">↺</span>
+                    Clear All
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="result-card" id="resultCard" style="display: none;">
+                <h2 class="section-title">
+                    <span class="title-icon">📊</span>
+                    Analysis Results
+                </h2>
+
+                <div class="prediction-result">
+                    <div class="prediction-box" id="predictionBox">
+                        <!-- Result will be displayed here -->
+                    </div>
+
+                    <!-- Chart Container -->
+                    <div class="chart-container">
+                        <canvas id="predictionChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Detailed Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Diabetes Risk</div>
+                        <div class="stat-value" id="diabetesProb">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Healthy Probability</div>
+                        <div class="stat-value" id="healthyProb">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Confidence</div>
+                        <div class="stat-value" id="confidenceScore">0%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Symptoms Count</div>
+                        <div class="stat-value" id="symptomsAnalyzed">0</div>
+                    </div>
+                </div>
+
+                <!-- Health Message -->
+                <div class="health-message" id="healthMessage">
+                    <!-- Message will be displayed here -->
+                </div>
+
+                <!-- Recommendations -->
+                <div class="recommendations">
+                    <h3>📋 Recommendations</h3>
+                    <ul id="recommendationsList">
+                        <li>✓ Consult with a healthcare professional for accurate diagnosis</li>
+                        <li>✓ This is an AI-assisted prediction, not a medical diagnosis</li>
+                        <li>✓ Maintain a healthy diet and regular exercise</li>
+                        <li>✓ Keep track of your health metrics regularly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-card">
+                <div class="info-icon">💡</div>
+                <h3>How It Works</h3>
+                <p>Our AI model analyzes your symptoms using advanced machine learning algorithms trained on medical data.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🔒</div>
+                <h3>Your Privacy</h3>
+                <p>All your data is processed locally and securely. We don't store any personal health information.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⚕️</div>
+                <h3>Always Consult</h3>
+                <p>This tool is for informational purposes only. Always consult a qualified healthcare professional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Smart Health Disease Prediction System</p>
+            <p>Built with <span class="heart">❤️</span> by AI Health Tech</p>
+        </div>
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Analyzing your symptoms...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
